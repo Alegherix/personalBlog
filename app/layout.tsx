@@ -8,7 +8,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${roboto.className} bg-dark80 text-white p-4`} lang="en">
+    <html
+      className={`${roboto.className} bg-dark-800 text-white p-4`}
+      lang="en"
+    >
       <head />
       <body>
         <Navbar />

@@ -5,7 +5,7 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <nav>
-        <div className="bg-dark70 w-screen">
+        <div className="bg-dark-700 w-screen">
           <Link href="/">
             <span>Alegherix</span>
           </Link>
