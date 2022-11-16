@@ -4,8 +4,9 @@ import { Heading } from 'components/Heading';
 export default function Home() {
   return (
     <main>
-      <Heading as="h1">Welcome to my blog</Heading>
-      <BlogCard slug="Disabled Notifications" />
+      <section className="flex items-center justify-center">
+        <BlogCard slug="Disabled Notifications" />
+      </section>
     </main>
   );
 }

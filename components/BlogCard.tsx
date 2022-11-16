@@ -17,7 +17,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
   title,
 }) => {
   return (
-    <article className="bg-dark-800 flex flex-col gap-2">
+    <article className="bg-dark-800 flex flex-col gap-2 max-w-screen-sm">
       <Heading as="h2">I disabled notification & you should to! </Heading>
       <Heading as="h3" variant="Secondary">
         A post about what I experienced disabling all notifications

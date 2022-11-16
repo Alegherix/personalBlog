@@ -1,3 +1,4 @@
+import { Footer } from 'components/Footer';
 import { Navbar } from 'components/Navbar';
 import { roboto } from 'utils/fonts';
 import './globals.css';
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body className="max-w-screen-xl mx-auto">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import { Separator } from 'components/Separator';
 import Link from 'next/link';
 import React from 'react';
 import { archivo } from 'utils/fonts';
@@ -11,7 +12,7 @@ export const Navbar: React.FC = () => {
         </Link>
         <Link href="/posts">Posts</Link>
       </nav>
-      <div className="h-[2px] rounded-md bg-dark-700 w-full mt-4 mb-20" />
+      <Separator className="mb-20" />
     </>
   );
 };

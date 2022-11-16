@@ -4,6 +4,7 @@ import { Font } from 'types/shared';
 import { archivo, fontMap } from 'utils/fonts';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../tailwind.config';
+import { clsx } from 'clsx';
 
 type Headings = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -22,12 +23,12 @@ type TailwindColors =
   | `${keyof DefaultColors}-${TailwindNumberKeys}`
   | keyof DefaultColors;
 type ThemeColors = `${'dark' | 'light'}-${TailwindNumberKeys}`;
-type MyColors = TailwindColors | ThemeColors;
+type MyColors = `text-${TailwindColors | ThemeColors}`;
 
 const colorMap: Record<Variant, MyColors> = {
-  Primary: 'white',
-  Secondary: 'dark-700',
-  Tertiary: 'blue-300',
+  Primary: 'text-white',
+  Secondary: 'text-dark-700',
+  Tertiary: 'text-blue-300',
 };
 
 export const Heading: React.FC<HeadingProps> = ({
@@ -42,7 +43,7 @@ export const Heading: React.FC<HeadingProps> = ({
   const textColor = colorMap[variant];
 
   return (
-    <Tag className={`${currentFontClass} text-${textColor} ${className}`}>
+    <Tag className={clsx(currentFontClass, textColor, className)}>
       {children}
     </Tag>
   );
