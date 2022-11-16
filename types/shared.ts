@@ -3,4 +3,4 @@ export function asyncComponent<T, R>(fn: (arg: T) => Promise<R>): (arg: T) => R 
   }
 
 
-export type Font = 'archivo' | 'roboto';
+export type Font = 'Archivo' | 'Roboto';

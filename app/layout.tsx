@@ -1,3 +1,4 @@
+import { Navbar } from 'components/Navbar';
 import { roboto } from 'utils/fonts';
 import './globals.css';
 
@@ -7,13 +8,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={roboto.className} lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html className={`${roboto.className} bg-dark80 text-white p-4`} lang="en">
       <head />
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
