@@ -9,14 +9,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      className={`${roboto.className} bg-dark-800 text-white p-4`}
-      lang="en"
-    >
+    <html className={`${roboto.className} bg-dark-900 text-white `} lang="en">
       <head />
-      <body className="max-w-screen-xl mx-auto">
+      <body className="max-w-screen-xl mx-auto flex min-h-screen p-4 flex-col relative">
         <Navbar />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

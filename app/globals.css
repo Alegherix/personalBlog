@@ -4,20 +4,24 @@
 
 @layer base {
   h1 {
-    @apply text-4xl;
+    @apply text-2xl md:text-3xl lg:text-6xl;
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-2xl md:text-3xl;
   }
 
   h3,h4 {
-    @apply text-2xl
+    @apply text-lg
   }
 }
 
 @layer components {
   .center {
     @apply flex items-center justify-center 
+  }
+
+  .transitionAnimation{
+    @apply transition duration-200 ease-in-out
   }
 }
