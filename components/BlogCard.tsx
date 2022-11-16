@@ -21,7 +21,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <article>
       <Link
-        className={'group flex flex-col gap-2 max-w-screen-sm group p-4'}
+        className={'group flex flex-col gap-2 max-w-screen-md group p-4'}
         href={`/posts/${slug}`}
       >
         <Heading as="h2">I disabled notifications & you should to!</Heading>

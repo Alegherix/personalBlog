@@ -14,6 +14,9 @@
   h3,h4 {
     @apply text-lg
   }
+  p,span {
+    @apply leading-relaxed
+  }
 }
 
 @layer components {
