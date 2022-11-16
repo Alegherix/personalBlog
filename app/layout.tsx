@@ -13,7 +13,7 @@ export default function RootLayout({
       lang="en"
     >
       <head />
-      <body>
+      <body className="max-w-screen-xl mx-auto">
         <Navbar />
         {children}
       </body>

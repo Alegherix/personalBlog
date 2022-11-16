@@ -15,3 +15,9 @@
     @apply text-2xl
   }
 }
+
+@layer components {
+  .center {
+    @apply flex items-center justify-center 
+  }
+}
