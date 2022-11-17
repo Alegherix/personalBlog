@@ -22,7 +22,7 @@ module.exports = {
         }
       },
       animation: {
-        fadeAndBounce : 'fadeIn 1s ease-in-out, bounceSide 1.3s ease-in-out infinite'
+        fadeAndBounce : 'fadeIn 0.7s ease-in-out, bounceSide 1.3s ease-in-out infinite'
       },
       
         colors: {

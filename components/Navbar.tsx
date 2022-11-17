@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
         <Link href="/">
           <span className={archivo.className}>Alegherix</span>
         </Link>
-        <Link href="/posts">Posts</Link>
+        {/* <Link href="/posts">Posts</Link> */}
         <ThemeSwitcher />
       </nav>
       <Separator className="mb-20" />

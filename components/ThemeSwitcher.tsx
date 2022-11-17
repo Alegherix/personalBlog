@@ -13,34 +13,29 @@ const ThemeMap: Record<Themes, Themes> = {
 };
 
 export const ThemeSwitcher: React.FC = () => {
-  // const [initialState, setStorageState, getStorageState] =
-  // useLocalStorage<Themes>('theme', 'dark');
-  const router = useRouter();
-  const [theme, setTheme] = React.useState<Themes>(
-    // () => initialState || 'dark'
-    'dark'
-  );
+  const [initialState, setStorageState, getStorageState] =
+    useLocalStorage<Themes>('theme', 'dark');
+  const [theme, setTheme] = React.useState<Themes>('dark');
 
-  // useLayoutEffect(() => {
-  //   if (initialState) {
-  //     setTheme(initialState);
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  useEffect(() => {
+    if (initialState) {
+      setTheme(initialState);
+    }
+  }, [initialState]);
 
   const handleClick = () => {
-    // const currentTheme = getStorageState();
+    const currentTheme = theme;
     const nextTheme = ThemeMap[theme];
     // setStorageState(nextTheme);
-    // document.documentElement.classList.remove(theme);
-    // document.documentElement.classList.add(nextTheme);
+    document.documentElement.classList.remove(currentTheme);
+    document.documentElement.classList.add(nextTheme);
     setTheme(nextTheme);
-    router.refresh();
   };
 
   // if (!initialState) {
-  //   return null;
+  //   return <IconSun />;
   // }
+  // return <IconMoon />
 
   return (
     <button onClick={handleClick}>

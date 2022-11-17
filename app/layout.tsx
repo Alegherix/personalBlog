@@ -19,15 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      className={clsx(
-        font.variable,
-        'bg-white text-dark-900 dark:bg-dark-900 dark:text-white'
-      )}
-      lang="en"
-    >
+    <html className={clsx(font.variable, 'dark')} lang="en">
       <head />
-      <body className="max-w-screen-xl mx-auto flex min-h-screen p-4 flex-col relative">
+      <body className="max-w-screen-xl mx-auto flex min-h-screen p-4 flex-col relative bg-white text-black dark:bg-dark-900 dark:text-white">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

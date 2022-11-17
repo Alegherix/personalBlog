@@ -18,16 +18,16 @@ interface HeadingProps {
   className?: string;
 }
 
-type TailwindNumberKeys = keyof DefaultColors['slate'];
-type TailwindColors =
-  | `${keyof DefaultColors}-${TailwindNumberKeys}`
-  | keyof DefaultColors;
-type ThemeColors = `${'dark' | 'light'}-${TailwindNumberKeys}`;
-type MyColors = `text-${TailwindColors | ThemeColors}`;
+// type TailwindNumberKeys = keyof DefaultColors['slate'];
+// type TailwindColors =
+//   | `${keyof DefaultColors}-${TailwindNumberKeys}`
+//   | keyof DefaultColors;
+// type ThemeColors = `${'dark' | 'light'}-${TailwindNumberKeys}`;
+// type MyColors = `text-${TailwindColors | ThemeColors}`;
 
-const colorMap: Record<Variant, MyColors> = {
-  Primary: 'text-white',
-  Secondary: 'text-dark-700',
+const colorMap: Record<Variant, string> = {
+  Primary: 'text-dark-900',
+  Secondary: 'dark:text-dark-700 text-gray-',
   Tertiary: 'text-blue-300',
 };
 
