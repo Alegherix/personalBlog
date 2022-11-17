@@ -13,7 +13,7 @@ const mockSections: string[] = [
 
 export const TableOfContent: React.FC = () => {
   return (
-    <aside className="max-lg:hidden min-w-[200px] uppercase sticky right-0 top-32 self-start">
+    <aside className="max-lg:hidden min-w-[200px] uppercase sticky right-0 top-40 self-start">
       <nav className=" flex flex-col">
         <Heading as="h4">Table of Contents</Heading>
         <ul className="flex flex-col gap-2 mt-3">

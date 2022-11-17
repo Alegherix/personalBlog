@@ -9,7 +9,7 @@
   }
 
   h1 {
-    @apply text-3xl lg:text-4xl dark:text-white text-black font-black;
+    @apply text-4xl lg:text-5xl dark:text-white text-black font-black;
   }
 
   h2 {

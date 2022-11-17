@@ -1,6 +1,7 @@
-import ReactMarkdown from 'react-markdown';
-import { Content } from 'app/posts/[slug]/Content';
 import { TableOfContent } from 'app/posts/[slug]/TableOfContent';
+import { Heading } from 'components/Heading';
+import { Separator } from 'components/Separator';
+import ReactMarkdown from 'react-markdown';
 import {
   getAllPosts,
   getFormatedSlug,
@@ -23,21 +24,34 @@ export default function page({
 }) {
   const { slug } = params;
   let myContent;
+  let frontmatterContent;
   try {
-    const { content } = getSinglePost(getFormatedSlug(slug), './markdown');
+    const { frontmatter, content } = getSinglePost(
+      getFormatedSlug(slug),
+      './markdown'
+    );
     myContent = content;
+    frontmatterContent = frontmatter;
   } catch (error: any) {
     return <ErrorComponent error={error} />;
   }
 
   return (
-    <div className="relative flex gap-8 justify-around">
-      <div className="flex flex-col max-w-screen-sm">
-        <ReactMarkdown className="prose lg:prose-xl dark:prose-invert">
-          {myContent}
-        </ReactMarkdown>
-      </div>
-      <TableOfContent />
-    </div>
+    <article>
+      <section className="text-center mb-20">
+        <Heading as="h1">{frontmatterContent.title}</Heading>
+        <Heading as="h3" className="lg:text-xl" variant="Secondary">
+          {frontmatterContent.description}
+        </Heading>
+      </section>
+      <section className="relative flex gap-8 justify-around">
+        <div className="flex flex-col max-w-screen-sm">
+          <ReactMarkdown className="prose lg:prose-xl dark:prose-invert">
+            {myContent}
+          </ReactMarkdown>
+        </div>
+        <TableOfContent />
+      </section>
+    </article>
   );
 }
