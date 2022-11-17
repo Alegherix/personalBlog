@@ -22,6 +22,7 @@ export const getSinglePost = (slug: string, folder: string) => {
 };
 
 export const getFormatedSlug = (slug: string) => slug.replace(' ', '-').replace('.md', '').toLocaleLowerCase();
+
 export const getAllPosts = () => {
   const POSTS_PATH = getPath('markdown');
 
@@ -33,6 +34,8 @@ export const getAllPosts = () => {
       const source = getFileContent(fileName, 'markdown'); // retrieve the file contents
       const slug = fileName.replace(/\\.md?$/, ''); // get the slug from the filename
       const { data } = matter(source); // extract frontmatter
+      console.log("New Slug that gets exported?", slug);
+      
       return {
         frontmatter: data,
         slug,
