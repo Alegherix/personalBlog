@@ -3,10 +3,9 @@ import { getAllPosts } from 'utils/getMarkdownData';
 
 export default function Home() {
   const allPosts = getAllPosts();
-  console.log(allPosts);
 
   return (
-    <section className="flex items-center justify-center flex-col">
+    <section className="flex items-center gap-14 justify-center flex-col">
       {allPosts.map((post) => (
         <BlogCard
           teaser={post.frontmatter.teaser}

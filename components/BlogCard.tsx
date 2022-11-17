@@ -21,7 +21,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <article>
       <Link
-        className={'group flex flex-col gap-2 max-w-screen-md group p-4'}
+        className={'group flex flex-col gap-2 max-w-screen-md group p-2'}
         href={`/posts/${slug}`}
       >
         <Heading as="h2">{title}</Heading>

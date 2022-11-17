@@ -1,4 +1,3 @@
-
 ---
 title: I disabled notifications & you should to
 description: By removing distractions I noticed all the perks of not being constantly disrupted
