@@ -1,5 +1,4 @@
 import { BlogCard } from 'components/BlogCard';
-import { Heading } from 'components/Heading';
 
 export default function Home() {
   return (

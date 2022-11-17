@@ -31,13 +31,9 @@ const socialMedia: SocialMedia[] = [
 ];
 export const SocialMediaGroup: React.FC = () => {
   return (
-    <div className="flex gap-4 lg:gap-12 items-center justify-center mt-6 mb-5">
+    <div className="flex gap-4  items-center justify-center mt-6 mb-5">
       {socialMedia.map((social) => (
-        <a
-          className="transitionAnimation hover:text-heaven-500 p-2"
-          href={social.url}
-          key={social.name}
-        >
+        <a className="textTransform p-2" href={social.url} key={social.name}>
           <social.icon size={20} />
         </a>
       ))}

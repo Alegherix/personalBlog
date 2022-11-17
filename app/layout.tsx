@@ -23,7 +23,7 @@ export default function RootLayout({
       <head />
       <body className="max-w-screen-xl mx-auto flex min-h-screen p-4 flex-col relative darkmode">
         <Navbar />
-        <main className="flex-grow mt-10 lg:mt-20">{children}</main>
+        <main className="flex-grow mt-10">{children}</main>
         <Footer />
       </body>
     </html>

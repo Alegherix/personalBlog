@@ -27,7 +27,7 @@ interface HeadingProps {
 
 const colorMap: Record<Variant, string> = {
   Primary: 'text-dark-900',
-  Secondary: 'dark:text-dark-700 text-gray-',
+  Secondary: 'dark:text-dark-700',
   Tertiary: 'text-blue-300',
 };
 
