@@ -1,4 +1,5 @@
 import { Separator } from 'components/Separator';
+import { SocialMediaGroup } from 'components/SocialMediaGroup';
 import { ThemeSwitcher } from 'components/ThemeSwitcher';
 import Link from 'next/link';
 import React from 'react';
@@ -11,6 +12,7 @@ export const Navbar: React.FC = () => {
         <Link href="/">
           <span className={archivo.className}>Alegherix</span>
         </Link>
+        <SocialMediaGroup />
         {/* <Link href="/posts">Posts</Link> */}
         <ThemeSwitcher />
       </nav>

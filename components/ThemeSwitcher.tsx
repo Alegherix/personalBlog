@@ -38,7 +38,10 @@ export const ThemeSwitcher: React.FC = () => {
   // return <IconMoon />
 
   return (
-    <button onClick={handleClick}>
+    <button
+      className={'transitionAnimation hover:text-heaven-500 p-2'}
+      onClick={handleClick}
+    >
       {theme === 'dark' ? <IconSun /> : <IconMoon />}
     </button>
   );
