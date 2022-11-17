@@ -6,16 +6,16 @@ import { clsx } from 'clsx';
 import { IconArrowNarrowRight } from '@tabler/icons';
 
 type BlogCardProps = {
-  title?: string;
-  description?: string;
-  text?: string;
+  title: string;
+  description: string;
+  teaser: string;
   slug: string;
 };
 
 export const BlogCard: React.FC<BlogCardProps> = ({
   description,
   slug,
-  text,
+  teaser,
   title,
 }) => {
   return (
@@ -24,17 +24,11 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         className={'group flex flex-col gap-2 max-w-screen-md group p-4'}
         href={`/posts/${slug}`}
       >
-        <Heading as="h2">I disabled notifications & you should to!</Heading>
+        <Heading as="h2">{title}</Heading>
         <Heading as="h3" variant="Secondary">
-          The remarkable things i discovered when disabling notifications
+          {description}
         </Heading>
-        <p className="mt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem rerum
-          facilis tempora corrupti debitis quis vitae eum facere a perspiciatis
-          laboriosam quod fugit amet dolores iure dolore placeat alias,
-          praesentium similique nulla doloremque magni! Maiores, perferendis?
-          Reiciendis totam sint odit.
-        </p>
+        <p className="mt-2">{teaser}</p>
         <span
           className={clsx(
             archivo.className,

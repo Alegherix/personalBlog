@@ -1,7 +1,6 @@
-import React from 'react';
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
+import path from 'path';
 
 export const getPath = (folder: string) => {
   return path.join(process.cwd(), `/${folder}`); // Get full path
@@ -12,28 +11,30 @@ export const getFileContent = (filename: string, folder: string) => {
   return fs.readFileSync(path.join(POSTS_PATH, filename), 'utf8');
 };
 
-export const getAllPosts = (folder: string) => {
-  const POSTS_PATH = getPath(folder);
+export const getSinglePost = (slug: string, folder: string) => {
+  const source = getFileContent(`${slug}.md`, folder);
+  const { data: frontmatter, content } = matter(source);
+
+  return {
+    frontmatter,
+    content,
+  };
+};
+
+export const getAllPosts = () => {
+  const POSTS_PATH = getPath('markdown');
 
   return fs
     .readdirSync(POSTS_PATH) // get files in directory
-    .filter((path) => /\\.md?$/.test(path)) // only .md files
+    .filter((path) => path.endsWith('.md')) // only .md files
     .map((fileName) => {
       // map over each file
-      const source = getFileContent(fileName, folder); // retrieve the file contents
+      const source = getFileContent(fileName, 'markdown'); // retrieve the file contents
       const slug = fileName.replace(/\\.md?$/, ''); // get the slug from the filename
       const { data } = matter(source); // extract frontmatter
       return {
         frontmatter: data,
-        slug: slug,
+        slug,
       };
     });
-};
-
-export const MarkdownParser: React.FC = () => {
-  return (
-    <>
-      <div></div>
-    </>
-  );
 };
