@@ -33,9 +33,11 @@ export const SocialMediaGroup: React.FC = () => {
   return (
     <div className="flex gap-4  items-center justify-center mt-6 mb-5">
       {socialMedia.map((social) => (
-        <a className="textTransform p-2" href={social.url} key={social.name}>
-          <social.icon size={20} />
-        </a>
+        <button className="textTransform p-2" key={social.name}>
+          <a href={social.url}>
+            <social.icon size={20} />
+          </a>
+        </button>
       ))}
     </div>
   );

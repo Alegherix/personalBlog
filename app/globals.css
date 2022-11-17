@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+
+  body {
+    @apply scrollbar
+  }
+
   h1 {
     @apply text-2xl md:text-3xl lg:text-6xl dark:text-white text-black;
   }
@@ -33,4 +38,33 @@
   .darkmode{
     @apply bg-white text-black dark:bg-dark-900 dark:text-white
   }
+}
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+        }
+        
+        .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        }
+        
+        .scrollbar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 100vh;
+        background-color: #545455;
+        }
+        
+        .scrollbar::-webkit-scrollbar {
+        width: 12px;
+        background-color: #171B26
+        }
+        
+        .scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 100vh;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #171B26;
+        } 
 }
