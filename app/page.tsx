@@ -1,5 +1,5 @@
 import { BlogCard } from 'components/BlogCard';
-import { getAllPosts } from 'utils/getMarkdownData';
+import { getAllPosts, getFormatedSlug } from 'utils/getMarkdownData';
 
 export default function Home() {
   const allPosts = getAllPosts();
@@ -12,7 +12,7 @@ export default function Home() {
           key={post.slug}
           title={post.frontmatter.title}
           description={post.frontmatter.description}
-          slug={post.slug}
+          slug={getFormatedSlug(post.slug)}
         />
       ))}
     </section>

@@ -1,6 +1,10 @@
 import { Content } from 'app/posts/[slug]/Content';
 import { TableOfContent } from 'app/posts/[slug]/TableOfContent';
-import { getAllPosts, getSinglePost } from 'utils/getMarkdownData';
+import {
+  getAllPosts,
+  getFormatedSlug,
+  getSinglePost,
+} from 'utils/getMarkdownData';
 import ErrorComponent from './error';
 
 export async function generateStaticParams() {
@@ -18,9 +22,11 @@ export default function page({
 }) {
   const { slug } = params;
 
-  const newSlug = slug.replace(' ', '-').toLocaleLowerCase();
   try {
-    const { frontmatter, content } = getSinglePost(newSlug, './markdown');
+    const { frontmatter, content } = getSinglePost(
+      getFormatedSlug(slug),
+      './markdown'
+    );
   } catch (error: any) {
     return <ErrorComponent error={error} />;
   }

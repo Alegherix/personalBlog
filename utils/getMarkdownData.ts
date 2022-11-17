@@ -21,6 +21,7 @@ export const getSinglePost = (slug: string, folder: string) => {
   };
 };
 
+export const getFormatedSlug = (slug: string) => slug.replace(' ', '-').replace('.md', '').toLocaleLowerCase();
 export const getAllPosts = () => {
   const POSTS_PATH = getPath('markdown');
 
