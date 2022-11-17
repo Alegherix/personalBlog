@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown';
 import { Content } from 'app/posts/[slug]/Content';
 import { TableOfContent } from 'app/posts/[slug]/TableOfContent';
 import {
@@ -21,19 +22,19 @@ export default function page({
   params: { slug: string; unformatedSlug: string };
 }) {
   const { slug } = params;
-
+  let myContent;
   try {
-    const { frontmatter, content } = getSinglePost(
-      getFormatedSlug(slug),
-      './markdown'
-    );
+    const { content } = getSinglePost(getFormatedSlug(slug), './markdown');
+    myContent = content;
   } catch (error: any) {
     return <ErrorComponent error={error} />;
   }
 
   return (
-    <div className="relative min-h-[200vh] flex">
-      <Content />
+    <div className="relative min-h-[200vh] flex gap-8">
+      <div className="flex flex-col max-w-screen-sm">
+        <ReactMarkdown>{myContent}</ReactMarkdown>
+      </div>
       <TableOfContent />
     </div>
   );

@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown';
 import React from 'react';
 
 export const Content: React.FC = () => {
