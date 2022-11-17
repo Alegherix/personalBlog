@@ -3,9 +3,9 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="text-xs flex flex-col items-center justify-center ">
+    <footer className="text-xs flex flex-col items-center justify-center mt-10">
       <Separator />
-      <p className="my-4 text-dark-700">
+      <p className="mt-4 text-dark-700">
         © Alegherix 2022. All rights reserved.
       </p>
     </footer>

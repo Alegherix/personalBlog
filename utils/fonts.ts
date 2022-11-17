@@ -1,11 +1,4 @@
-import { Archivo, Roboto } from '@next/font/google';
-import { Font } from 'types/shared';
+import { Archivo } from '@next/font/google';
 
 
-export const archivo = Archivo({weight: '900'})
-export const roboto = Roboto({ weight: '400' })
-
-export const fontMap: Record<Font, string> = {
-    Archivo: archivo.className,
-    Roboto: roboto.className
-}
+export const archivo = Archivo({weight: ['900', '600' ]})

@@ -1,11 +1,10 @@
 'use client';
 
 import { Archivo } from '@next/font/google';
+import { clsx } from 'clsx';
 import { Footer } from 'components/Footer';
 import { Navbar } from 'components/Navbar';
-import { roboto } from 'utils/fonts';
 import './globals.css';
-import { clsx } from 'clsx';
 
 const font = Archivo({
   weight: ['400', '700'],

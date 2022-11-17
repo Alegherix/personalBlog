@@ -31,9 +31,11 @@ export default function page({
   }
 
   return (
-    <div className="relative min-h-[200vh] flex gap-8">
+    <div className="relative flex gap-8 justify-around">
       <div className="flex flex-col max-w-screen-sm">
-        <ReactMarkdown>{myContent}</ReactMarkdown>
+        <ReactMarkdown className="prose lg:prose-xl dark:prose-invert">
+          {myContent}
+        </ReactMarkdown>
       </div>
       <TableOfContent />
     </div>

@@ -9,8 +9,6 @@ tags:
   - dopamine
 ---
 
-# I disabled notifications & you should to
-
 After recently reading Deep Work by Cal Newtch I started to think about all the things that are stealing my attention and forcing some parts of my brain to not fully be able to immerse myself in whatever I'm doing. In a world where there's constant distractions surrounding you it's sometimes very hard to find any sort of attention or focus. 
 
 I tend to think of myself as having it fairly easy to reach a state of flow. Being a remote working developer with a small child living in the same appartment, I had to learn to cancel out all the surrounding noise, it's do or die, right? 
@@ -27,7 +25,7 @@ The AI systems that is being applied by the big corporations are getting better,
 
 ## Conclusion
 
-I disabled all (I mean **ALL**) notifications on my phone. All those previous distractions which many times stole my focus without me even realising it, now gone! My ability to focus is improved, and i rarely found myself suddenly realizing i'm reading some random article trying to figure out wth happend and how I got here. The best part of it is, do you know how many important stories, news, or whatever else i missed? **0**
+I disabled all (I mean **ALL**) notifications on my phone. All those previous distractions which many times stole my focus without me even realising it, now gone! My ability to focus is improved, and i rarely found myself suddenly realizing i'm reading some random article trying to figure out wth happend and how I got here. The best part of it is, do you know how many important stories, news, or whatever else i missed? \\ **0**
 
-Reclaim your attention, try it to.
+Reclaim your attention, disable notifications.
 

@@ -15,9 +15,7 @@ export const TableOfContent: React.FC = () => {
   return (
     <aside className="max-lg:hidden min-w-[200px] uppercase sticky right-0 top-32 self-start">
       <nav className=" flex flex-col">
-        <Heading as="h4" font="Archivo">
-          Table of Contents
-        </Heading>
+        <Heading as="h4">Table of Contents</Heading>
         <ul className="flex flex-col gap-2 mt-3">
           {mockSections.map((section) => (
             <li className="text-xs textTransform" key={section}>

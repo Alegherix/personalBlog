@@ -25,7 +25,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         href={`/posts/${slug}`}
       >
         <Heading as="h2">{title}</Heading>
-        <Heading as="h3" variant="Secondary">
+        <Heading as="h3" variant="Secondary" weight="Regular">
           {description}
         </Heading>
         <p className="mt-2">{teaser}</p>
