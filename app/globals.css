@@ -27,4 +27,7 @@
   .transitionAnimation{
     @apply transition duration-200 ease-in-out
   }
+  .darkmode{
+    @apply bg-white text-black dark:bg-dark-900 dark:text-white
+  }
 }

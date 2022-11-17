@@ -13,13 +13,15 @@ const mockSections: string[] = [
 
 export const TableOfContent: React.FC = () => {
   return (
-    <aside className="max-lg:hidden sticky right-0 w-40 flex flex-col">
-      <Heading as="h2">Table of Contents</Heading>
-      {mockSections.map((section) => (
-        <Link key={section} href={`#${section}`}>
-          {section}
-        </Link>
-      ))}
+    <aside className="max-lg:hidden sticky right-0 top-0">
+      <nav className=" flex flex-col">
+        <Heading as="h2">Table of Contents</Heading>
+        {mockSections.map((section) => (
+          <Link key={section} href={`#${section}`}>
+            {section}
+          </Link>
+        ))}
+      </nav>
     </aside>
   );
 };

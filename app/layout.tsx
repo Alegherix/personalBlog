@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html className={clsx(font.variable, 'dark')} lang="en">
       <head />
-      <body className="max-w-screen-xl mx-auto flex min-h-screen p-4 flex-col relative bg-white text-black dark:bg-dark-900 dark:text-white">
+      <body className="max-w-screen-xl mx-auto flex min-h-screen p-4 flex-col relative darkmode">
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow mt-10 lg:mt-20">{children}</main>
         <Footer />
       </body>
     </html>

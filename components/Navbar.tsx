@@ -6,7 +6,7 @@ import { archivo } from 'utils/fonts';
 
 export const Navbar: React.FC = () => {
   return (
-    <>
+    <div className="sticky top-0 darkmode z-10">
       <nav className="flex items-center justify-between w-full h-20">
         <Link href="/">
           <span className={archivo.className}>Alegherix</span>
@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
         {/* <Link href="/posts">Posts</Link> */}
         <ThemeSwitcher />
       </nav>
-      <Separator className="mb-20" />
-    </>
+      <Separator />
+    </div>
   );
 };

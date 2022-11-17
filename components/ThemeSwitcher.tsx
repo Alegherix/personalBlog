@@ -13,15 +13,15 @@ const ThemeMap: Record<Themes, Themes> = {
 };
 
 export const ThemeSwitcher: React.FC = () => {
-  const [initialState, setStorageState, getStorageState] =
-    useLocalStorage<Themes>('theme', 'dark');
+  // const [initialState, setStorageState, getStorageState] =
+  //   useLocalStorage<Themes>('theme', 'dark');
   const [theme, setTheme] = React.useState<Themes>('dark');
 
-  useEffect(() => {
-    if (initialState) {
-      setTheme(initialState);
-    }
-  }, [initialState]);
+  // useEffect(() => {
+  //   if (initialState) {
+  //     setTheme(initialState);
+  //   }
+  // }, [initialState]);
 
   const handleClick = () => {
     const currentTheme = theme;
