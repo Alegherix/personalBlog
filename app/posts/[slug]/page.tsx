@@ -21,8 +21,6 @@ export default function page({
 }: {
   params: { slug: string; unformatedSlug: string };
 }) {
-  console.log('Slug in default page', params.slug);
-
   const { slug } = params;
   let myContent;
   try {
