@@ -1,6 +1,7 @@
 import { TableOfContent } from 'app/posts/[slug]/TableOfContent';
 import { Heading } from 'components/Heading';
 import ReactMarkdown from 'react-markdown';
+import { ElementContent } from 'react-markdown/lib/ast-to-react';
 import {
   getAllPosts,
   getFormatedSlug,
@@ -48,7 +49,15 @@ export default function page({
       </section>
       <section className="relative flex gap-8 justify-around">
         <div className="flex flex-col max-w-screen-sm">
-          <ReactMarkdown className="prose lg:prose-xl dark:prose-invert">
+          <ReactMarkdown
+            components={{
+              h2: ({ node, ...props }) => {
+                const newId = node.children[0] as { value: string };
+                return <h2 id={newId.value} {...props} />;
+              },
+            }}
+            className="prose lg:prose-xl dark:prose-invert"
+          >
             {myContent}
           </ReactMarkdown>
         </div>

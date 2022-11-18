@@ -12,6 +12,7 @@ interface HeadingProps {
   variant?: Variant;
   weight?: Weight;
   className?: string;
+  idHeading?: boolean;
 }
 
 const colorMap: Record<Variant, string> = {
@@ -26,10 +27,14 @@ export const Heading: React.FC<HeadingProps> = ({
   weight = 'Black',
   className,
   children,
+  idHeading,
 }) => {
   const textColor = colorMap[variant];
   return (
-    <Tag className={clsx(archivo.className, textColor, className)}>
+    <Tag
+      // id={idHeading ? JSON.stringify(children) : undefined}
+      className={clsx(archivo.className, textColor, className)}
+    >
       {children}
     </Tag>
   );

@@ -1,15 +1,5 @@
-import { Heading } from 'components/Heading';
-import Link from 'next/link';
+import { ClientLinkSmoothScroll } from 'components/ClientLinkSmoothScroll';
 import React from 'react';
-
-const mockSections: string[] = [
-  'Introduction',
-  'Section 1',
-  'Section 2',
-  'Section 3',
-  'Section 4',
-  'Section 5',
-];
 
 type TableOfContentProps = {
   headings: RegExpMatchArray | null;
@@ -23,9 +13,7 @@ export const TableOfContent: React.FC<TableOfContentProps> = ({ headings }) => {
         <ul className="flex flex-col gap-2 mt-3">
           {headings?.map((section) => (
             <li className="text-xs textTransform" key={section}>
-              <Link key={section} href={`#${section}`}>
-                {section}
-              </Link>
+              <ClientLinkSmoothScroll section={section} />
             </li>
           ))}
         </ul>

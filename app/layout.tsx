@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={clsx(font.variable, 'dark')} lang="en">
+    <html className={clsx(font.variable, 'dark scroll-smooth')} lang="en">
       <head />
       <body className="max-w-screen-xl mx-auto flex min-h-screen p-4 flex-col relative darkmode">
         <Navbar />
