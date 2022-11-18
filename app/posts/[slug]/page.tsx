@@ -1,6 +1,5 @@
 import { TableOfContent } from 'app/posts/[slug]/TableOfContent';
 import { Heading } from 'components/Heading';
-import { Separator } from 'components/Separator';
 import ReactMarkdown from 'react-markdown';
 import {
   getAllPosts,
@@ -32,9 +31,12 @@ export default function page({
     );
     myContent = content;
     frontmatterContent = frontmatter;
-  } catch (error: any) {
-    return <ErrorComponent error={error} />;
+  } catch (error) {
+    return <ErrorComponent error={error as Error} />;
   }
+  // All type of headings
+  const regex = new RegExp(/(?<=# ).*/g);
+  const headings = myContent.match(regex);
 
   return (
     <article>
@@ -50,7 +52,7 @@ export default function page({
             {myContent}
           </ReactMarkdown>
         </div>
-        <TableOfContent />
+        <TableOfContent headings={headings} />
       </section>
     </article>
   );

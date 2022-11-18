@@ -11,13 +11,17 @@ const mockSections: string[] = [
   'Section 5',
 ];
 
-export const TableOfContent: React.FC = () => {
+type TableOfContentProps = {
+  headings: RegExpMatchArray | null;
+};
+
+export const TableOfContent: React.FC<TableOfContentProps> = ({ headings }) => {
   return (
     <aside className="max-lg:hidden min-w-[200px] uppercase sticky right-0 top-40 self-start">
       <nav className=" flex flex-col">
-        <Heading as="h4">Table of Contents</Heading>
+        <h4>Table of Contents</h4>
         <ul className="flex flex-col gap-2 mt-3">
-          {mockSections.map((section) => (
+          {headings?.map((section) => (
             <li className="text-xs textTransform" key={section}>
               <Link key={section} href={`#${section}`}>
                 {section}

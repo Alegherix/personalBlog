@@ -28,16 +28,8 @@ export const Heading: React.FC<HeadingProps> = ({
   children,
 }) => {
   const textColor = colorMap[variant];
-
   return (
-    <Tag
-      className={clsx(
-        archivo.className,
-        textColor,
-        // weight === 'Black' ? 'font-black' : 'font-normal',
-        className
-      )}
-    >
+    <Tag className={clsx(archivo.className, textColor, className)}>
       {children}
     </Tag>
   );

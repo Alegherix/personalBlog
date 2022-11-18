@@ -13,7 +13,6 @@ export const Navbar: React.FC = () => {
           <span className={archivo.className}>Alegherix</span>
         </Link>
         <SocialMediaGroup />
-        {/* <Link href="/posts">Posts</Link> */}
         <ThemeSwitcher />
       </nav>
       <Separator />
