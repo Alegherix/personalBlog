@@ -5,7 +5,7 @@ export default function Head() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
-        content="The personal blog of Alegherix where I share my interests such as what I'm currently reading, to what I'm currently learning."
+        content="The personal blog of Alegherix where I share my interests such as what I'm currently reading, and what I'm currently learning. I might even throw in a little bit of code, who knows."
       />
       <link rel="icon" href="/favicon.ico" />
     </>
